@@ -1,0 +1,690 @@
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+    /* INICIO VARIABLES-----------------------------------------------------------------------       */
+    
+     :root {
+        --black-color: black;
+        --white-color: white;
+        --red-color: red;
+        --yelow-color: #E0DC20;
+        --gray-color: gray;
+        /* Tipografia y Espaciado */
+        --max: 20px;
+        --medium: 15px;
+        --min: 10px;
+        /* box-shadow */
+        --box: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        --box_tenue: 0px 0 2px 1px #e6e5e9;
+        /* ancho de columnas  100/12*/
+        --col-width: 8.3333333333%;
+    }
+    /* FIN VARIABLES-----------------------------------------------------------------------       */
+    
+    html,
+    body {
+        padding: 0px;
+        margin: 0px;
+        font-size: var(--medium);
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    p,
+    label {
+        text-align: justify;
+        font-size: var(--medium);
+    }
+    
+    .btn {
+        background-color: var(--red-color);
+        color: var(--white-color);
+        font-size: var(--medium);
+        border-radius: var(--min);
+    }
+    /* INICIO NAVBAR header---------------------------------------------------- */
+    
+    header {
+        display: flex;
+        background-color: var(--black-color);
+        padding: var(--min);
+        color: var(--white-color);
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header ul {
+        display: flex;
+    }
+    
+    header li {
+        padding-left: 40px;
+        list-style: none;
+    }
+    
+    header li a {
+        color: var(--white-color);
+        text-decoration: none;
+        font-weight: bold;
+        font-size: var(--medium);
+    }
+    
+    header li a:hover {
+        /* hover para crear un efecto de seleccion del boton */
+        color: var(--red-color);
+    }
+    /* FIN NAVBAR header -----------------------------------------------------------------*/
+    /*  */
+    /* INICIO HERO -----------------------------------------------------------------*/
+    
+    h1 {
+        font-size: var(--max);
+        line-height: 2;
+        letter-spacing: -0.2px;
+        color: var(--white-color);
+    }
+    
+    h1 strong {
+        color: var(--red-color);
+    }
+    
+    .hero {
+        height: 350px;
+        background-color: var(--black-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .hero-image {
+        object-fit: over;
+        /* se arreglan las dimenciones origenales de la imagen */
+        /* height: auto; */
+    }
+    /* FIN HERO -----------------------------------------------------------------*/
+    /*  */
+    /* INICIO MAIN SECTION -----------------------------------------------------------------*/
+    
+    .main_section {
+        /* margin: 10px; */
+        padding: var(--min);
+        text-align: center;
+    }
+    
+    .mas_nosotros {
+        background-image: url(./images/curve.png);
+        height: 300px;
+        background-size: cover;
+        /* para que ocupe todo el largo del div */
+        background-position: center top;
+        /* se alinea en el centro y hacia arriba*/
+        justify-content: center;
+        display: flex;
+        padding: 10%;
+    }
+    
+    .product {
+        padding: var(--min);
+        /* crea un espacio entre las dos tarjetas */
+        margin-top: var(--min);
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .product .content {
+        background-color: var(--white-color);
+        padding: 10px;
+        border-radius: var(--min);
+        /* marcos con sombra */
+        -webkit-box-shadow: var(--box);
+        -moz-box-shadow: var(--box);
+        box-shadow: var(--box);
+    }
+    /* .img_content {
+        text-align: center;
+    } */
+    /* FIN MAIN SECTION ----------------------------------------------------------------- */
+    /*  */
+    /* INICIO CONTACTO------------------------------------------------------------------------------- */
+    
+    .contact {
+        background-color: var(--red-color);
+        color: white;
+        height: 150px;
+        /* alto */
+        display: flex;
+        /* alineado vertical */
+        align-items: center;
+        /* alineado vetical */
+        justify-content: space-between;
+        /* justify-content: space-between;oganizar los
+            iconos de manera horizontal (caracteristica del padre) */
+        flex-wrap: wrap;
+        /* flex-wrap: wrap;RESdes */
+    }
+    
+    .form-email {
+        margin: 10px;
+    }
+    
+    .form-email input {
+        /* input de que la imagen va adentro del recuadro */
+        border-color: gray;
+        padding: 5px 20px 5px 25px;
+        /* placeholder espacios */
+        border-style: solid;
+        border-radius: 5px;
+        background-image: url(./images/SVG/envelope.svg);
+        /* background-image: url(../images/envelope.svg); */
+        /* los dos puntos significan que salga de la carpeta y busque */
+        background-size: 15px 15px;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 5px;
+    }
+    
+    .form-email button {
+        display: block;
+        /* para que baje el boton */
+        margin: 5px 0 0 220px;
+        background-color: transparent;
+        border-radius: 5px;
+        color: white;
+        border-color: white;
+        padding: 3px 15px;
+        /* para hacer mas grande el boton */
+    }
+    /* .social {
+        } 
+        /* border: 1px solid red; quitamos este borde ya que 
+        ya no nos sirve porque solo la queriamos para saber la ubicacion
+        de los iconos */
+    
+    .social-link {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        /* border: 1px solid white;quitamos este borde ya que 
+            ya no nos sirve porque solo la queriamos para saber la ubicacion
+            de los iconos */
+        background-size: 50px 50px;
+        /* background-size: 50px 50px;estaba en cada una de las 4 de abajo 
+            pero como se repite lo podemos poner en las caracteristicas del
+            padre que es .social-link */
+        margin: 0 10px;
+        /* margen entre los cuadritos */
+    }
+    
+    .social-link.twitter {
+        background-image: url(./images/SVG/twitter.svg);
+        /* background-image: url(../images/twitter.svg); */
+        /* svg (scalavor vecter graphics) formato (imagenes que se pueden
+            escalar y nunca perderan resolucion)por lo tanto hay que darles un tamaño*/
+    }
+    
+    .social-link.facebook {
+        background-image: url(./images/SVG/facebook.svg);
+        /* svg (scalavor vecter graphics) formato (imagenes que se pueden
+            escalar y nunca perderan resolucion)por lo tanto hay que darles un tamaño*/
+    }
+    
+    .social-link.instagram {
+        background-image: url(./images/SVG/instagram.svg);
+        /* svg (scalavor vecter graphics) formato (imagenes que se pueden
+            escalar y nunca perderan resolucion)por lo tanto hay que darles un tamaño*/
+    }
+    /* FIN CONTACTO------------------------------------------------------------------------------- */
+    /*  */
+    /* INICIO FOOTER--------------------------------------------------------------------------------------- */
+    
+    .footer {
+        background-color: #1b2127;
+        color: white;
+        display: flex;
+        align-items: center;
+        /* para alinear de manera vertical
+    pero tiene que ir junto con el 
+    alineamiento de la imagen dentro de footer */
+        justify-content: space-between;
+        /* para que esten alineados en los 
+    extremos, en el izquiedo el texto de 
+    curso de desarrollo web y en el extremo
+    derecho el texto de designed whith love  */
+        flex-wrap: wrap;
+        /* flex-wrap: wrap;RESdes */
+    }
+    
+    .footer img {
+        vertical-align: middle;
+        /* queda completamente alineado verticalmente 
+    la imagen y los textos junto con el 
+    align-items de footer */
+    }
+    /* para finalizar con el footer necesitamos
+darle un clor balnco a la ancla de redireccion */
+    
+    .footer a {
+        color: white;
+    }
+    /* FIN FOOTER--------------------------------------------------------------------------------------- */
+    /*  */
+    /* INICIO GRID PRODUCTOS------------------------------------------------------------------------------------------------- */
+    /* container>row>column */
+    
+    .row {
+        display: flex;
+        /* row columnas de manera horizontal */
+    }
+    
+    .col-1 {
+        width: var(--col-width);
+        /* en porcentaje si tenemos el 100% y se divide entre el numero de columnas que queremos 12 en este caso  */
+    }
+    
+    .col-2 {
+        width: calc(var(--col-width)*2);
+    }
+    
+    .col-3 {
+        width: calc(var(--col-width)*3);
+    }
+    
+    .col-4 {
+        width: calc(var(--col-width)*4);
+    }
+    
+    .col-5 {
+        width: calc(var(--col-width)*5);
+    }
+    
+    .col-6 {
+        width: calc(var(--col-width)*6);
+    }
+    
+    .col-7 {
+        width: calc(var(--col-width)*7);
+    }
+    
+    .col-8 {
+        width: calc(var(--col-width)*8);
+    }
+    
+    .col-9 {
+        width: calc(var(--col-width)*9);
+    }
+    
+    .col-10 {
+        width: calc(var(--col-width)*10);
+    }
+    
+    .col-11 {
+        width: calc(var(--col-width)*11);
+    }
+    
+    .col-12 {
+        width: 100%;
+    }
+    
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
+        padding: var(--min);
+    }
+    /* FIN GRID PRODUCTOS------------------------------------------------------------------------------------------------- */
+    /*  */
+    /* INICIO PROCESO COMPRA--------------------------------------------------------------------------------------------------- */
+    
+    .modulo_pago {
+        background: var(--white-color);
+        box-shadow: var(--box_tenue);
+        padding: var(--min);
+    }
+    
+    .modulo_pago_images {
+        max-width: 200px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .data {
+        margin-top: var(--min);
+        width: 100%;
+        height: 35px;
+        border: 1px solid var(--gray-color);
+        border-radius: 5px;
+        box-sizing: border-box;
+        /* box-sizing: border-box; define desde donde tomara referencia el 100% de ancho con el borde de la caja */
+    }
+    
+    .modulo_pago .btn {
+        margin-top: var(--medium);
+        width: 100%;
+        height: 35px;
+    }
+    /* INICIO PROCESO COMPRA--------------------------------------------------------------------------------------------------- */
+    /*  */
+    /* INICIO CONTAINER-------------------------------------------------------------------------------------------- */
+    
+    .container {
+        /* border: 1px solid red; */
+        /* lo quitamos unaves hallamos terminado los 
+              conteiner, ya que facilita la identificacion 
+              de cada container  */
+        /* RESdes */
+        max-width: 1020px;
+        /* width: 1000px; estaba asi pero pone por el RESdes  */
+        /* para que sea variable y su maximo sea el indicado */
+        flex: 1;
+        /* flex: 1; toma todo el ancho disponible dentro del elemento */
+        margin: 0 auto;
+        /* centra el elemento */
+        /*  */
+        /* agregar esto causa que se pierdan todas las caractireisticas
+              que se agregaron anteriomente ya que solo se pasan a los hijo drirectos
+              y este vine siendo el segundo hijo por lo tanto tenemos que pònerle inherit
+              que herede las todas las caracteristicas. */
+        display: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+        height: inherit;
+        /* estas caracteristicas se usan para todo y se aplica a cada seccion
+              se le pone la clase conteiner pata utilizarla */
+        flex-wrap: inherit;
+        /* hereadado experience list para que se pueden poner 
+              las experiencias una bajo otra   */
+    }
+    /* FIN CONTAINER-------------------------------------------------------------------------------------------- */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /* INICIO ANIMACIONES --------------------------------------------------------------------*/
+    
+    .fadeIn {
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .fadeInDown {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+    }
+    
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    .fadeInDown-product1 {
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeInDown-product1;
+        animation-name: fadeInDown-product1;
+    }
+    
+    @keyframes fadeInDown-product1 {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -200%, 0);
+            transform: translate3d(0, -200%, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    .fadeInUp {
+        -webkit-animation-duration: 10s;
+        animation-duration: 10s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    
+    .fadeInUp-product2 {
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeInUp-product2;
+        animation-name: fadeInUp-product2;
+    }
+    
+    @keyframes fadeInUp-product2 {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 200%, 0);
+            transform: translate3d(0, 200%, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    /* FIN ANIMACIONES ---------------------------------------------------------------------------*/
+    /*  */
+    /* INICIO MEDIAQUERY -----------------------------------------------------------------*/
+    
+    @media screen and (max-width: 1023px) {
+        .container {
+            padding: 0 1em;
+        }
+        .hero {
+            height: auto;
+            /* alto automatico para que entre el texto y la imagen
+              se le quita el que tiene de 300px */
+            position: relative;
+            /* para que la imagen quede traspuesta correctamente y solucionar el 
+              problema generado en el estiramiento de la imagen */
+            overflow: hidden;
+            /* para que la imagen no se desborde y no pierda formato */
+            padding: 2em;
+        }
+        h1 {
+            font-size: 2.5em;
+            /* modificando tamaño de letra */
+            z-index: 2;
+            /* z-index: 2;sera el que este encima del z-index 2 */
+        }
+        /* positions css */
+        .hero-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* se logra que se estire en todas sus direcciones
+              pero se crea un problema ya que no es realativo a algo 
+              por lo tanto el hero tendra que tener posicion relativa */
+            z-index: 1;
+            /* z-index: 1; es el elemento que queremos que este
+              por debajo del z-index 2 el cual sera el que ete arriba */
+            width: 100%;
+            /* para que la imagen ocupe todo el ancho establecido */
+            height: 100%;
+            /* para que ocupeto todo el alto */
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        .hero {
+            width: auto;
+            height: auto;
+            position: relative;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        /* grid */
+        .row {
+            display: inherit;
+        }
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-10,
+        .col-11,
+        .col-12 {
+            width: 100%;
+        }
+        /* grid */
+    }
+    
+    @media screen and (max-width: 480px) {
+        .main_section {
+            height: auto;
+            width: auto;
+            font-size: .8em;
+        }
+        .mas_nosotros {
+            display: inherit;
+            height: auto;
+            width: auto;
+        }
+    }
+    
+    @media screen and (max-width: 300px) {
+        .hero {
+            width: auto;
+            height: auto;
+            position: relative;
+        }
+        h1 {
+            font-size: 1em;
+        }
+        .main_section {
+            height: auto;
+            width: auto;
+            font-size: .8em;
+        }
+    }
+    /* FIN MEDIAQUERY */
